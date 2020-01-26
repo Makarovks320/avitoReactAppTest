@@ -1,0 +1,10 @@
+.wrapper {
+  min-height: calc(100vh - 100px);
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}

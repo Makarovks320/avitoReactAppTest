@@ -1,0 +1,12 @@
+.headerWrapper {
+  text-align: center;
+  margin: auto;
+  padding-top: 15px;
+}
+.headerWrapper h1 {
+  margin: 0 auto;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
