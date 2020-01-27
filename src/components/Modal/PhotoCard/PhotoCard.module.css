@@ -1,0 +1,37 @@
+.picture {
+  width: 331px;
+  height: 205px;
+  margin: 30px 30px 30px;
+  box-shadow: inset 0px  0px 0 1px black;
+  overflow: hidden;
+}
+form {
+  width: 331px;
+  margin: 30px 30px 30px;
+}
+.input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+button.submit {
+  width: 100%;
+  height: 30px;
+  padding: 0;
+  background-color: #4997D0;
+}
+@media (max-width: 767px){
+  .picture {
+    width: 320px;
+    margin: 0 0 25px 0;
+  }
+  form {
+    width: 276px;
+    margin: 0;
+  }
+  .input,
+  button.submit {
+    margin-left: 22px;
+    margin: 0 auto 22px 20px;
+  }
+}

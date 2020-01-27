@@ -1,8 +1,8 @@
 import {combineReducers, createStore } from "redux";
-import galleryReducer from './gallery-reducer'
+import appReducer from './appReducer'
 
 let reducers = combineReducers({
-  gallery: galleryReducer
+  gallery: appReducer
 })
 let store = createStore(reducers);
 

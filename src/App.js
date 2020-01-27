@@ -1,18 +1,24 @@
 import React from 'react'
+// import { connect } from 'react-redux'
 import './App.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Gallery from './components/Gallery/Gallery'
+import GalleryContainer from './components/Gallery/GalleryContainer'
+import Modal from './components/Modal/Modal'
 
-const App = (props) => {
-  debugger;
-  return (
+class App extends React.Component {
+  render (){
+    return (
     <div className="appWrapper">
       <Header />
-      <Gallery pictures={props.store.getState().gallery.pictures} reversePictures={props.dispatch}/>
+      <GalleryContainer />
+      <Modal />
       <Footer className="appFooter"/>
     </div>
   );
 }
+}
+// let mapStateToProps = (state) => ({modal: state.gallery.modal})
 
+// export default connect( mapStateToProps, )(App);
 export default App;

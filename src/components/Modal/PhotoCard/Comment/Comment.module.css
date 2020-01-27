@@ -1,0 +1,24 @@
+.wrapper {
+  width: 200px;
+  margin-left: 22px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px){
+  .wrapper {
+    position: absolute;
+    top: 30px;
+    left: 361px;
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+}
+span {
+  font-size: 13px;
+  line-height: 15px;
+  color: #999999;
+}
+p {
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+}

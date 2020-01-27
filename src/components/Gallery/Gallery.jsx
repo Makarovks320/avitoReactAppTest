@@ -3,8 +3,7 @@ import s from './Gallery.module.css';
 import Picture from './Picture/Picture';
 
 const Gallery = (props) => {
-  debugger;
-  let pictureElements = props.pictures.map( p => <Picture url={p.url} id={p.id} reversePictures={props.reversePictures}/>)
+  let pictureElements = props.pictures.map( p => <Picture key={p.id} url={p.url} id={p.id} sendId={props.sendId}/>)
 return (
   <div  className={s.wrapper}>
     <div className={s.gallery}>

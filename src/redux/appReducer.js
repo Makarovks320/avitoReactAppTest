@@ -1,4 +1,5 @@
-const REVERSE = 'REVERSE';
+const OPEN_POPUP = 'OPEN_POPUP';
+const CLOSE_POPUP ='CLOSE_POPUP';
 
 const initialState = {
   pictures: [
@@ -12,19 +13,29 @@ const initialState = {
   modal: false,
   comments: []
 }
-const galleryReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
   switch (action.type) {
-    case REVERSE:
-      state.pictures.reverse();
-      alert(action.id);
-      return state;
+    case OPEN_POPUP:
+      return {
+        ...state,
+        modal: !state.modal
+      }
+      case CLOSE_POPUP:
+      return {
+        ...state,
+        modal: !state.modal
+      }
     default: 
       return state;
   }
 };
 
-export const reverseAC = (id) => { 
-  return {type: REVERSE, id: id}
+export const openPopupAC = (id) => { 
+  return {type: OPEN_POPUP, id: id}
 };
 
-export default galleryReducer;
+export const closePopupAC = () => {
+  return {type: CLOSE_POPUP}
+}
+
+export default appReducer;
