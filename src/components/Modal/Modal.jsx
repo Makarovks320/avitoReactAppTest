@@ -3,7 +3,7 @@ import s from './Modal.module.css';
 import { connect } from 'react-redux';
 import {closePopupAC} from './../../redux/appReducer';
 import {NavLink} from 'react-router-dom'
-import PhotoCard from './PhotoCard/PhotoCard'
+import PhotoCardContainer from './PhotoCard/PhotoCardContainer'
 
 const Modal = (props) => {
     if(!!props.modal){
@@ -11,7 +11,7 @@ const Modal = (props) => {
     <div>
       <div className={s.modalOverlay}></div>
       <div className={s.popup}>
-        <PhotoCard />
+        <PhotoCardContainer />
         <NavLink className={s.modalClose} to={''} onClick={props.closePopup}></NavLink>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import {openPopupAC} from './../../redux/appReducer';
+import {openPopupAC, setGalleryAC} from './../../redux/appReducer';
 import {connect} from 'react-redux'
 import Gallery from './Gallery'
 
@@ -12,6 +12,9 @@ let mapDispatchToProps = (dispatch) => {
   return {
   sendId: (id) => {
     dispatch(openPopupAC(id))
+  },
+  setGallery: (pictures) => {
+    dispatch(setGalleryAC(pictures))
   }
   }
 };

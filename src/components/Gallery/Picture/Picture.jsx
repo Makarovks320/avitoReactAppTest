@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
 import s from './Picture.module.css';
-import pic from './../../../img/image-generic.png';
 
 
 const Picture = (props) => {
@@ -9,7 +8,7 @@ const Picture = (props) => {
   return (
     <div className={s.picture}>
       <NavLink to={path} className={s.item} onClick={() => props.sendId(props.id)}>
-        <img src={props.url || pic} alt='картинка' width='100%'/>
+        <img src={props.url} alt='картинка' width='100%'/>
       </NavLink>
     </div>
   );

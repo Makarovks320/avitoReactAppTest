@@ -1,6 +1,6 @@
 .appWrapper {
-  width: calc(100% - 40px);
-  min-width: 280px;
+  width: calc(100%);
+  min-width: 320px;
   min-height: 100vh;
   padding: 0 20px;
   background-color: antiquewhite;
