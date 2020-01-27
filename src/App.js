@@ -12,7 +12,9 @@ class App extends React.Component {
     <div className="appWrapper">
       <Header />
       <GalleryContainer />
-      <Modal />
+      <Modal>
+        
+      </Modal>
       <Footer className="appFooter"/>
     </div>
   );

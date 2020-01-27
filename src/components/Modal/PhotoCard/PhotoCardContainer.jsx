@@ -1,17 +1,17 @@
-// import {openPopupAC} from './../../redux/appReducer';
 import {connect} from 'react-redux'
 import PhotoCard from './PhotoCard'
+// import {addCommentAC} from '../';
 
 
 let mapStateToProps = (state) => {
   return {
-    url: state.gallery.photoCardData.url
+    url: state.gallery.photoCardData.url,
   }
 };
 // let mapDispatchToProps = (dispatch) => {
 //   return {
-//   sendId: (id) => {
-//     dispatch(openPopupAC(id))
+//   addComment: (id) => {
+//     dispatch(addCommentAC(id))
 //   }
 //   }
 // };

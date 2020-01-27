@@ -1,11 +1,4 @@
-.picture {
-  width: 331px;
-  height: 205px;
-  margin: 30px 30px 30px;
-  box-shadow: inset 0px  0px 0 1px black;
-  overflow: hidden;
-}
-/* form {
+form {
   width: 331px;
   margin: 30px 30px 30px;
 }
@@ -19,13 +12,13 @@ button.submit {
   height: 30px;
   padding: 0;
   background-color: #4997D0;
-} */
+}
 @media (max-width: 767px){
   .picture {
     width: 320px;
     margin: 0 0 25px 0;
   }
-  /* form {
+  form {
     width: 276px;
     margin: 0;
   }
@@ -33,5 +26,5 @@ button.submit {
   button.submit {
     margin-left: 22px;
     margin: 0 auto 22px 20px;
-  } */
+  }
 }

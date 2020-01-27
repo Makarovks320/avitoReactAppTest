@@ -2,8 +2,8 @@ import React from 'react';
 import s from './Modal.module.css';
 import { connect } from 'react-redux';
 import {closePopupAC} from './../../redux/appReducer';
-import {NavLink} from 'react-router-dom'
-import PhotoCardContainer from './PhotoCard/PhotoCardContainer'
+import {NavLink} from 'react-router-dom';
+import PhotoCardContainer from './PhotoCard/PhotoCardContainer';
 
 const Modal = (props) => {
     if(!!props.modal){

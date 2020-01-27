@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Comments.module.css';
 import {connect} from 'react-redux';
-// import {addCommentAC} from './../../redux/appReducer';
 
 const Comment = (props) => {
   let date = new Date(props.date);
@@ -30,13 +29,7 @@ let mapStateToProps = (state) => {
     comments: state.gallery.photoCardData.comments
   }
 };
-// let mapDispatchToProps = (dispatch) => {
-//   return {
-//   addComment: (id) => {
-//     dispatch(addCommentAC(id))
-//   }
-//   }
-// };
-const CommentsContainer = connect(mapStateToProps, )(Comments);
+
+const CommentsContainer = connect(mapStateToProps)(Comments);
 
 export default CommentsContainer;

@@ -1,4 +1,4 @@
-import {openPopupAC, setGalleryAC} from './../../redux/appReducer';
+import {setGalleryAC, openPhotoCardThunk} from './../../redux/appReducer';
 import {connect} from 'react-redux'
 import Gallery from './Gallery'
 
@@ -10,11 +10,11 @@ let mapStateToProps = (state) => {
 };
 let mapDispatchToProps = (dispatch) => {
   return {
-  sendId: (id) => {
-    dispatch(openPopupAC(id))
-  },
   setGallery: (pictures) => {
     dispatch(setGalleryAC(pictures))
+  },
+  openPhotoCard: (id) => {
+    dispatch(openPhotoCardThunk(id))
   }
   }
 };

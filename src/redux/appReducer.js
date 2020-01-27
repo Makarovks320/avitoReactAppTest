@@ -1,17 +1,17 @@
+import {appAPI} from '../api/api'
 const OPEN_POPUP = 'OPEN_POPUP';
 const CLOSE_POPUP = 'CLOSE_POPUP';
 const SET_GALLERY = 'SET_GALLERY';
+const SET_PHOTO_CARD_DATA = 'SET_PHOTO_CARD_DATA';
+
 
 const initialState = {
   pictures: [],
   modal: false,
   photoCardData: {
-    "id": 237,
-    "url": "https://picsum.photos/id/237/600/400",
-    "comments": [
-      { "id": 153, "text": "Крутая фотка","date": 1578054737927 },
-      { "id": 154, "text": "Мне нравится", "date": 1578054737927 }
-    ]
+    "id": '',
+    "url": "",
+    "comments": []
   }
 }
 const appReducer = (state = initialState, action) => {
@@ -31,13 +31,18 @@ const appReducer = (state = initialState, action) => {
         ...state,
         pictures: [...action.pictures]
       }
+    case SET_PHOTO_CARD_DATA:
+      return {
+        ...state,
+        photoCardData: action.data
+      }
     default: 
       return state;
   }
 };
 
-export const openPopupAC = (id) => { 
-  return {type: OPEN_POPUP, id: id}
+export const openPopupAC = () => { 
+  return {type: OPEN_POPUP}
 };
 export const closePopupAC = () => {
   return {type: CLOSE_POPUP}
@@ -45,5 +50,16 @@ export const closePopupAC = () => {
 export const setGalleryAC = (pictures) => {
   return {type: SET_GALLERY, pictures: pictures}
 }
+export const setPhotoCardDataAC = (data) => {
+  return {type: SET_PHOTO_CARD_DATA, data: data}
+}
+export const openPhotoCardThunk =(id) => {
+  return (dispatch) => {
+  appAPI.getPhotoCardData(id).then(data => {
+    dispatch(setPhotoCardDataAC(data))
+    dispatch(openPopupAC())
+  })
+}}
+
 
 export default appReducer;
