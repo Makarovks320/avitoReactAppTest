@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 import s from './Picture.module.css';
 
 
@@ -12,6 +12,6 @@ const Picture = (props) => {
       </NavLink>
     </div>
   );
-  };
+};
   
   export default Picture;

@@ -1,4 +1,4 @@
-import {appAPI} from '../api/api'
+import {appAPI} from '../api/api';
 const OPEN_POPUP = 'OPEN_POPUP';
 const CLOSE_POPUP = 'CLOSE_POPUP';
 const SET_GALLERY = 'SET_GALLERY';
@@ -14,7 +14,7 @@ const initialState = {
     url: '',
     comments: []
   }
-}
+};
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
     case OPEN_POPUP:
@@ -41,10 +41,8 @@ const appReducer = (state = initialState, action) => {
       return {
         ...state,
         photoCardData: {...state.photoCardData,
-                        comments: [
-                                  ...state.photoCardData.comments,
-                                  {text: action.comment, date: action.date}
-                                  ]
+                        comments: [...state.photoCardData.comments,
+                                  {text: action.comment, date: action.date}]
                         }
       }
     default: 
@@ -57,23 +55,23 @@ export const openPopupAC = () => {
 };
 export const closePopupAC = () => {
   return {type: CLOSE_POPUP}
-}
+};
 export const setGalleryAC = (pictures) => {
   return {type: SET_GALLERY, pictures: pictures}
-}
+};
 export const setPhotoCardDataAC = (data) => {
   return {type: SET_PHOTO_CARD_DATA, data: data}
-}
+};
 export const openPhotoCardThunk = (id) => {
   return (dispatch) => {
   appAPI.getPhotoCardData(id).then(data => {
     dispatch(setPhotoCardDataAC(data))
     dispatch(openPopupAC())
   })
-}}
+}};
 export const addCommentAC = (comment, date) => {
   return {type: ADD_COMMENT, comment, date}
-}
+};
 export const putCommentThunkCreator = (commentData) => {
   let {id, name, comment, date} = {...commentData}
   return (dispatch) => {
@@ -86,7 +84,7 @@ export const putCommentThunkCreator = (commentData) => {
       }
     })
   }
-}
+};
 
 
 export default appReducer;

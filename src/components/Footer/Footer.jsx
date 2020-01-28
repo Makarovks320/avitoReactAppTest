@@ -9,7 +9,7 @@ const Footer = () => {
       <span>© 2018-2019</span>
     </div>
   </footer>
-  )
-}
+  );
+};
 
 export default Footer;

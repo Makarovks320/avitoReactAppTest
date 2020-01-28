@@ -7,7 +7,7 @@ class Gallery extends React.Component {
   componentDidMount () {
     appAPI.getGallery()
     .then(data => {this.props.setGallery(data)});
-  }
+  };
   render() {
     let pictureElements = this.props.pictures.map( p => <Picture key={p.id} url={p.url} id={p.id} openPhotoCard={this.props.openPhotoCard}/>)
     return (
@@ -16,7 +16,7 @@ class Gallery extends React.Component {
           {pictureElements}
         </div>
       </div>
-)
-}
-}
+    )
+  };
+};
 export default Gallery;

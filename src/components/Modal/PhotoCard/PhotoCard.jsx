@@ -7,7 +7,7 @@ const PhotoCard = (props) => {
   const putComment = (formData) => {
     let date = new Date().getTime();
     props.putComment({id: props.id, ...formData, date});
-  }
+  };
   return (
     <div className={s.container}>
       <div className={s.picture}>
@@ -16,6 +16,6 @@ const PhotoCard = (props) => {
       <CommentsContainer />
       <CardForm onSubmit={putComment}/>
     </div>
-  )
-}
+  );
+};
 export default PhotoCard;

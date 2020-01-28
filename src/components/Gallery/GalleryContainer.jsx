@@ -1,6 +1,6 @@
 import {setGalleryAC, openPhotoCardThunk} from './../../redux/appReducer';
-import {connect} from 'react-redux'
-import Gallery from './Gallery'
+import {connect} from 'react-redux';
+import Gallery from './Gallery';
 
 
 let mapStateToProps = (state) => {

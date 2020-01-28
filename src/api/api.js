@@ -18,6 +18,6 @@ export const appAPI = {
   },
   putComment(id, name, comment) {
     return instance.post(`${id}/comments`, {name, comment})
-    .then(response => response.status)
+    .then(response => response.status);
   }
 }
