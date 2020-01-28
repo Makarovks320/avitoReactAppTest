@@ -15,5 +15,9 @@ export const appAPI = {
     .then(response => {
       return response.data;
     })
+  },
+  putComment(id, name, comment) {
+    return instance.post(`${id}/comments`, {name, comment})
+    .then(response => response.status)
   }
 }

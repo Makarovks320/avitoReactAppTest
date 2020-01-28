@@ -6,12 +6,29 @@ form {
   width: 100%;
   height: 30px;
   margin-bottom: 20px;
+  padding: .375rem .75rem;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.input:focus,
+button.submit:focus {
+  outline: 0 solid rgb(100, 165, 250);
+  box-shadow: 0 0 0 1px rgb(100, 165, 250);
+}
+button.submit:focus{
+  background-color: #007bff;
+  border-color: #005cbf;
 }
 button.submit {
   width: 100%;
   height: 30px;
   padding: 0;
   background-color: #4997D0;
+  color: #fff;
+  border: 1px solid transparent;
+  border-color: #007bff;
+  border-radius: .25rem;
 }
 @media (max-width: 767px){
   .picture {
@@ -27,4 +44,14 @@ button.submit {
     margin-left: 22px;
     margin: 0 auto 22px 20px;
   }
+}
+.formControl.error input,
+.formControl.error textarea
+{
+  border: 2px solid red;
+}
+
+.formControl.error
+{
+  color: red;
 }
