@@ -13,7 +13,11 @@ const FormsControl = ({meta: {touched, error}, children}) => {
 
 export const Input = (props) => {
   const {input, meta, ...restProps} = props;
+  let newMeta = {};
+  for (let key in meta) {
+    newMeta[key.toLowerCase()] = meta[key] + ''
+  }
   return <FormsControl {...props}>
-          <input {...input} {...meta} {...restProps}/>
+          <input {...input} {...newMeta} {...restProps} />
         </FormsControl>
 };

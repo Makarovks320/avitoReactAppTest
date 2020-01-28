@@ -13,11 +13,11 @@ const CardForm = (props) => {
   };
   return (
     <form onSubmit={onSubmitLocal}>
-      <Field className={s.input} name='name' placeholder='Ваше имя' autifocus component={Input}
-              validate={[minLength2, required]}/>
-      <Field className={s.input} name='comment' placeholder='Ваш комментарий' component={Input}
-              validate={[minLength2, required]}/>
-      <Field className={s.submit} component='button'>Оставить комментарий</Field>
+      <Field className={s.input} name='name' placeholder='Ваше имя' component={Input}  
+             validate={[minLength2, required]}/>
+      <Field className={s.input} name='comment' placeholder='Ваш комментарий' component={Input} 
+             validate={[minLength2, required]}/>
+      <Field className={s.submit} component='button' name='submitButton'>Оставить комментарий</Field>
     </form>
   );
 };
