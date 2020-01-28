@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Modal.module.css';
 import { connect } from 'react-redux';
 import {closePopupAC} from './../../redux/appReducer';
-import {NavLink} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom';
 import PhotoCardContainer from './PhotoCard/PhotoCardContainer';
 
 class Modal extends React.Component {
@@ -13,7 +13,10 @@ class Modal extends React.Component {
     window.removeEventListener('keydown', this.onPopupEscPress);
   };
   onPopupEscPress = (evt) => {
-    if (evt.keyCode === 27) this.props.closePopup();
+    if (evt.keyCode === 27) {
+      this.props.closePopup();
+      this.props.history.push('');
+    };
   };
   render() {
     if(!!this.props.modal){
@@ -38,4 +41,4 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect( mapStateToProps, mapDispatchToProps)(Modal);
+export default withRouter(connect( mapStateToProps, mapDispatchToProps)(Modal));

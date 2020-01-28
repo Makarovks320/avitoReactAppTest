@@ -16,7 +16,8 @@ const Comment = (props) => {
 };
 
 const Comments = (props) => {
-  let commentElements = props.comments.map( c => <Comment key={c.id} text={c.text} date={c.date}/>)
+  let uniquekey = 0;
+  let commentElements = props.comments.map( c => <Comment key={uniquekey++} text={c.text} date={c.date}/>)
   return (
     <div className={s.wrapper}>
       {commentElements}
