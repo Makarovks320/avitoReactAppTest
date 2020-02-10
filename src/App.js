@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import GalleryContainer from './components/Gallery/GalleryContainer';
 import Modal from './components/Modal/Modal';
+import PhotoCardContainer from './components/Modal/PhotoCard/PhotoCardContainer';
 
 class App extends React.Component {
   render (){
@@ -11,7 +12,9 @@ class App extends React.Component {
     <div className='appWrapper'>
       <Header />
       <GalleryContainer />
-      <Modal />
+      <Modal>
+        <PhotoCardContainer />
+      </Modal>
       <Footer className='appFooter'/>
     </div>
     );

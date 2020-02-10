@@ -1,15 +1,29 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+ } */
+ 
 .wrapper {
-  width: 200px;
+  width: calc(100% - 30px);
   margin-left: 22px;
   margin-bottom: 40px;
+  /* overflow: auto; */
 }
 @media (min-width: 768px){
   .wrapper {
+    width: 235px;
+    height: 90%;
     position: absolute;
     top: 30px;
     left: 361px;
     margin-left: 15px;
     margin-bottom: 0;
+    overflow: auto;
   }
 }
 span {

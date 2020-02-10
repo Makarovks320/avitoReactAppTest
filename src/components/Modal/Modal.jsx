@@ -3,7 +3,6 @@ import s from './Modal.module.css';
 import { connect } from 'react-redux';
 import {closePopupAC} from './../../redux/appReducer';
 import {NavLink, withRouter} from 'react-router-dom';
-import PhotoCardContainer from './PhotoCard/PhotoCardContainer';
 
 class Modal extends React.Component {
   componentDidMount () {
@@ -18,17 +17,22 @@ class Modal extends React.Component {
       this.props.history.push('');
     };
   };
+  onOverlayClick = () => {
+    this.props.closePopup();
+    this.props.history.push('');
+  };
   render() {
     if(!!this.props.modal){
   return (
     <div>
-      <div className={s.modalOverlay}></div>
+      <div className={s.modalOverlay} onClick={this.onOverlayClick}></div>
       <div className={s.popup}>
-        <PhotoCardContainer />
+        {this.props.children}
         <NavLink className={s.modalClose} to={''} onClick={this.props.closePopup}></NavLink>
       </div>
     </div>
-         )} else {
+         )} 
+         else {
     return <div className={s.empty}></div>
     };
   };
